@@ -1,5 +1,9 @@
 import json
 import random
+import os
+
+SAVE_FILE = "verb_stats.json"
+
 verbs = [
     {"english": "be", "infinitive": "vara", "present": "är", "past": "var", "supine": "varit", "imperative": "var"},
     {"english": "become", "infinitive": "bli", "present": "blir", "past": "blev", "supine": "blivit", "imperative": "bli"},
@@ -49,28 +53,68 @@ verbs = [
     # {"english": "feel", "infinitive": "må", "present": "mår", "past": "mådde", "supine": "mått", "imperative": "må"}
 ]
 
-print("irregular verbs")
+if os.path.exists(SAVE_FILE):
+    with open(SAVE_FILE, "r", encoding="utf-8") as f:
+        stats = json.load(f)
+else:
+    stats = {}
+
+def ensure_stats(verb, tense):
+    key = f"{verb['infinitive']}-{tense}"
+    if key not in stats:
+        stats[key] = {"correct": 0, "wrong": 0}
+
+def save_stats():
+    with open(SAVE_FILE, "w", encoding="utf-8") as f:
+        json.dump(stats, f, ensure_ascii=False, indent=2)
+
+def get_weight(verb, tense):
+    """Return weight for a verb-tense pair (higher = more likely)."""
+    key = f"{verb['infinitive']}-{tense}"
+    record = stats.get(key, {"correct": 0, "wrong": 0})
+    wrong, correct = record["wrong"], record["correct"]
+    total = wrong + correct
+    if total == 0:
+        return 1.5  # slightly favor unseen forms
+    accuracy = correct / total if total > 0 else 0
+    return max(0.2, 2.5 * (1 - accuracy))  # lower accuracy → higher weight
+
+def choose_weighted(verbs):
+    weighted = []
+    for v in verbs:
+        for tense in ["infinitive", "present", "past", "supine", "imperative"]:
+            weighted.append((v, tense, get_weight(v, tense)))
+    # choose a random direction (Swedish or English)
+    (v, tense, _) = random.choices(weighted, weights=[w for _, _, w in weighted], k=1)[0]
+    return v, tense
+
+print("🇸🇪 Irregular Verb Trainer — per tense adaptive mode")
 print("Type your answer and press Enter. Ctrl+C to quit.\n")
+
 try:
     while True:
-        verb = random.choice(verbs)
-        
-        # randomly ask from Swedish or English perspective
         direction = random.choice(["swedish", "english"])
+        verb, tense = choose_weighted(verbs)
+        ensure_stats(verb, tense)
+        key = f"{verb['infinitive']}-{tense}"
+
         if direction == "swedish":
-            tenses = ["present", "past", "supine", "imperative"]
-            tense = random.choice(tenses)
-            prompt = f"{tense} form of '{verb['infinitive']}' (in English: {verb['english']})? "
+            prompt = f"{tense} form of '{verb['infinitive']}' (English: {verb['english']})? "
             correct = verb[tense]
         else:
-            tenses = ["infinitive","present", "past", "supine", "imperative"]
-            tense = random.choice(tenses)
             prompt = f"{tense} form of '{verb['english']}'? "
             correct = verb[tense]
+
         answer = input(prompt).strip().lower()
         if answer == correct.lower():
-            print("✅ Correct\n")
+            print("✅ Correct!\n")
+            stats[key]["correct"] += 1
         else:
-            print(f"❌ Incorrect. The correct answer is: '{correct}'\n")
+            print(f"❌ Incorrect. Correct answer: '{correct}'\n")
+            stats[key]["wrong"] += 1
+
+        save_stats()
+
 except KeyboardInterrupt:
     print("\n👋 Goodbye! Lycka till med din svenska!")
+    save_stats()

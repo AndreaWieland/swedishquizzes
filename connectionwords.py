@@ -1,54 +1,158 @@
+import json
 import random
+import os
+from collections import defaultdict
 
-# Focused list of very common Swedish connection words and phrases
-connectors = [
-    {"english": "and", "swedish": "och"},
-    {"english": "but", "swedish": "men"},
-    {"english": "or", "swedish": "eller"},
-    {"english": "because", "swedish": "eftersom"},
-    {"english": "so that", "swedish": "så att"},
-    {"english": "if", "swedish": "om"},
-    {"english": "when", "swedish": "när"},
-    {"english": "while", "swedish": "medan"},
-    {"english": "before", "swedish": "innan"},
-    {"english": "after", "swedish": "efter att"},
-    {"english": "although", "swedish": "fastän"},
-    {"english": "even though", "swedish": "även om"},
-    {"english": "therefore", "swedish": "därför"},
-    {"english": "so / then", "swedish": "så"},
-    {"english": "however", "swedish": "dock"},
-    {"english": "for example", "swedish": "till exempel"},
-    {"english": "in addition", "swedish": "dessutom"},
-    {"english": "on the other hand", "swedish": "å andra sidan"},
-    {"english": "that is / i.e.", "swedish": "det vill säga"},
-    {"english": "instead", "swedish": "istället"},
-    {"english": "because of", "swedish": "på grund av"},
-    {"english": "despite", "swedish": "trots"},
-    {"english": "as soon as", "swedish": "så snart som"},
-    {"english": "until", "swedish": "tills"},
-    {"english": "since", "swedish": "sedan"},
-    {"english": "therefore / that’s why", "swedish": "därför att"},
+STATS_FILE = "function_word_stats.json"
+
+# Common Swedish "in-between" words: conjunctions, prepositions, adverbs, etc.
+words = [
+    {"swedish": "och", "english": "and"},
+    {"swedish": "men", "english": "but"},
+    {"swedish": "eller", "english": "or"},
+    {"swedish": "eftersom", "english": "because"},
+    {"swedish": "för att", "english": "in order to / because"},
+    {"swedish": "så att", "english": "so that"},
+    {"swedish": "så", "english": "so / then"},
+    {"swedish": "därför", "english": "therefore"},
+    {"swedish": "dock", "english": "however"},
+    {"swedish": "också", "english": "also"},
+    {"swedish": "bara", "english": "only / just"},
+    {"swedish": "mycket", "english": "much / very"},
+    {"swedish": "under", "english": "under / during"},
+    {"swedish": "över", "english": "over / above"},
+    {"swedish": "framför", "english": "in front of"},
+    {"swedish": "bakom", "english": "behind"},
+    {"swedish": "mellan", "english": "between"},
+    {"swedish": "utan", "english": "without / but (after negative)"},
+    {"swedish": "hos", "english": "at (someone’s place)"},
+    {"swedish": "genom", "english": "through"},
+    {"swedish": "innan", "english": "before"},
+    {"swedish": "efter", "english": "after"},
+    {"swedish": "på", "english": "on / at"},
+    {"swedish": "i", "english": "in / inside"},
+    {"swedish": "av", "english": "of / by"},
+    {"swedish": "till", "english": "to / until"},
+    {"swedish": "från", "english": "from"},
+    {"swedish": "när", "english": "when"},
+    {"swedish": "om", "english": "if / about"},
+    {"swedish": "för", "english": "for / to"},
+    {"swedish": "mot", "english": "against / toward"},
+    {"swedish": "bland", "english": "among"},
+    {"swedish": "trots", "english": "despite"},
+    {"swedish": "redan", "english": "already"},
+    {"swedish": "ännu", "english": "still / yet"},
+    {"swedish": "aldrig", "english": "never"},
+    {"swedish": "alltid", "english": "always"},
+    {"swedish": "ofta", "english": "often"},
+    {"swedish": "ibland", "english": "sometimes"},
+    {"swedish": "snart", "english": "soon"},
+    {"swedish": "kanske", "english": "maybe / perhaps"},
+    {"swedish": "nästan", "english": "almost"},
+    {"swedish": "fortfarande", "english": "still"},
+    {"swedish": "här", "english": "here"},
+    {"swedish": "där", "english": "there"},
+    {"swedish": "hit", "english": "to here"},
+    {"swedish": "dit", "english": "to there"},
+    {"swedish": "hem", "english": "home (motion)"},
+    {"swedish": "hemma", "english": "at home"},
+    {"swedish": "borta", "english": "away / gone"},
+    {"swedish": "inne", "english": "inside"},
+    {"swedish": "ute", "english": "outside"},
+    {"swedish": "finns", "english": "there is / there are"},
+    {"swedish": "än", "english": "yet / than"},
+    {"swedish": "igen", "english": "again"},
+    {"swedish": "tillsammans", "english": "together"},
+    {"swedish": "ensam", "english": "alone"},
+    {"swedish": "däremot", "english": "on the other hand"},
+    {"swedish": "dessutom", "english": "in addition / furthermore"},
+    {"swedish": "fastän", "english": "although"},
+    {"swedish": "även om", "english": "even though"},
+    {"swedish": "således", "english": "thus"},
+    {"swedish": "nämligen", "english": "namely / that is"},
+    {"swedish": "till exempel", "english": "for example"},
+    {"swedish": "alltså", "english": "so / that means"},
+    {"swedish": "typ", "english": "like / kind of"},
+    {"swedish": "ju", "english": "(as you know / indeed)"},
+    {"swedish": "väl", "english": "surely / well"},
+    {"swedish": "nog", "english": "probably / enough"},
+    {"swedish": "precis", "english": "exactly"},
+    {"swedish": "liksom", "english": "like / sort of"},
 ]
 
-def ask_multiple_choice(question, correct_answer, options):
+# Load or initialize stats
+if os.path.exists(STATS_FILE):
+    with open(STATS_FILE, "r", encoding="utf-8") as f:
+        stats = json.load(f)
+else:
+    stats = {}
+
+# Ensure every word has an entry
+for w in words:
+    sw = w["swedish"]
+    if sw not in stats:
+        stats[sw] = {"asked": 0, "correct": 0}
+
+def save_stats():
+    with open(STATS_FILE, "w", encoding="utf-8") as f:
+        json.dump(stats, f, ensure_ascii=False, indent=2)
+
+def weighted_choice(words):
+    """Choose words with higher weight if accuracy is low."""
+    weights = []
+    for w in words:
+        s = stats[w["swedish"]]
+        asked, correct = s["asked"], s["correct"]
+        if asked == 0:
+            weight = 4.0
+        else:
+            acc = correct / asked
+            weight = max(0.5, 4.0 * (1 - acc))
+        weights.append(weight)
+    return random.choices(words, weights=weights, k=1)[0]
+
+def ask_question(word):
+    direction = random.choice(["to_english", "to_swedish"])
+    wrong_options = random.sample(
+        [w["english"] if direction == "to_english" else w["swedish"]
+         for w in words if w != word],
+        3
+    )
+
+    if direction == "to_english":
+        question = f"What is the English meaning of '{word['swedish']}'?"
+        correct = word["english"]
+        options = wrong_options + [correct]
+    else:
+        question = f"What is the Swedish word for '{word['english']}'?"
+        correct = word["swedish"]
+        options = wrong_options + [correct]
+
     random.shuffle(options)
     print(question)
-    for i, opt in enumerate(options, start=1):
+    for i, opt in enumerate(options, 1):
         print(f"  {i}. {opt}")
-    choice = input("Your answer (1-4): ").strip()
+
+    answer = input("Your answer (1-4): ").strip()
+    s = stats[word["swedish"]]
+    s["asked"] += 1
+
     try:
-        if options[int(choice)-1].lower() == correct_answer.lower():
+        if options[int(answer) - 1].lower() == correct.lower():
             print("✅ Correct!\n")
+            s["correct"] += 1
+            save_stats()
             return True
         else:
-            print(f"❌ Incorrect. Correct answer: {correct_answer}\n")
+            print(f"❌ Incorrect. Correct answer: {correct}\n")
+            save_stats()
             return False
     except (ValueError, IndexError):
-        print(f"⚠️ Invalid input. Correct answer was: {correct_answer}\n")
+        print(f"⚠️ Invalid input. Correct answer: {correct}\n")
+        save_stats()
         return False
 
-
-print("=== 🇸🇪 Swedish Connection Words Quiz (B1 Level) ===")
+print("=== 🇸🇪 Swedish Function Words Quiz ===")
 print("Type the number of your answer. Ctrl+C to quit.\n")
 
 score = 0
@@ -56,31 +160,20 @@ total = 0
 
 try:
     while True:
+        word = weighted_choice(words)
         total += 1
-        word = random.choice(connectors)
-        direction = random.choice(["to_swedish", "to_english"])
-
-        # Build wrong options
-        wrong_options = random.sample(
-            [w["swedish"] if direction == "to_swedish" else w["english"]
-             for w in connectors if w != word],
-            3
-        )
-
-        if direction == "to_swedish":
-            question = f"What is the Swedish word for '{word['english']}'?"
-            correct = word["swedish"]
-            options = wrong_options + [correct]
-        else:
-            question = f"What is the English meaning of '{word['swedish']}'?"
-            correct = word["english"]
-            options = wrong_options + [correct]
-
-        if ask_multiple_choice(question, correct, options):
+        if ask_question(word):
             score += 1
-
         print(f"Score: {score}/{total} ({round(score/total*100,1)}%)\n")
 
 except KeyboardInterrupt:
-    print("\n👋 Goodbye! You scored", f"{score}/{total} ({round(score/total*100,1)}%)")
-    print("Lycka till med din svenska!")
+    print("\n👋 Goodbye!")
+    print(f"Final score: {score}/{total} ({round(score/total*100,1)}%)")
+
+    # Summary of weak words
+    print("\n📊 Words that need more review:")
+    sorted_stats = sorted(stats.items(), key=lambda kv: (kv[1]["correct"]/kv[1]["asked"]) if kv[1]["asked"] else 0)
+    for sw, s in sorted_stats[:10]:
+        acc = s["correct"]/s["asked"] if s["asked"] else 0
+        print(f"  {sw}: {s['correct']}/{s['asked']} ({round(acc*100,1)}%)")
+    save_stats()
