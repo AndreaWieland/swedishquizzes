@@ -109,6 +109,9 @@ for w in words:
     if sw not in stats:
         stats[sw] = {"asked": 0, "correct": 0}
 
+LEVEL_UP_THRESHOLD = 0.8  # accuracy needed to switch to typing mode
+MIN_ASKS_FOR_LEVELUP = 5  # need at least this many attempts before switching
+
 def save_stats():
     with open(STATS_FILE, "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
@@ -128,48 +131,71 @@ def weighted_choice(words):
     return random.choices(words, weights=weights, k=1)[0]
 
 def ask_question(word):
-    direction = random.choice(["to_english", "to_swedish"])
-    wrong_options = random.sample(
-        [w["english"] if direction == "to_english" else w["swedish"]
-         for w in words if w != word],
-        3
-    )
-
-    if direction == "to_english":
-        question = f"'{word['swedish']}'?"
-        correct = word["english"]
-        options = wrong_options + [correct]
-    else:
-        question = f"'{word['english']}'?"
-        correct = word["swedish"]
-        options = wrong_options + [correct]
-
-    random.shuffle(options)
-    print(question)
-    for i, opt in enumerate(options, 1):
-        print(f"  {i}. {opt}")
-
-    answer = input("Your answer (1-4): ").strip()
+    """Ask either multiple-choice or short-answer based on performance."""
     s = stats[word["swedish"]]
+    asked, correct = s["asked"], s["correct"]
+    accuracy = correct / asked if asked > 0 else 0
+
+    # Decide if we should use typing mode for this word
+    typing_mode = asked >= MIN_ASKS_FOR_LEVELUP and accuracy >= LEVEL_UP_THRESHOLD
+
+    direction = random.choice(["to_english", "to_swedish"])
     s["asked"] += 1
 
-    try:
-        if options[int(answer) - 1].lower() == correct.lower():
-            print("✅ \n")
+    if direction == "to_english":
+        prompt = f"'{word['swedish']}' → "
+        correct_answer = word["english"]
+    else:
+        prompt = f"'{word['english']}' → "
+        correct_answer = word["swedish"]
+
+    # --- Short answer mode ---
+    if typing_mode:
+        answer = input(f"{prompt}").strip().lower()
+        if answer == correct_answer.lower():
+            print("✅ Correct!\n")
             s["correct"] += 1
             save_stats()
             return True
         else:
-            print(f"❌ {correct}\n")
+            print(f"❌ Correct answer: {correct_answer}\n")
             save_stats()
             return False
-    except (ValueError, IndexError):
-        print(f"⚠️ Invalid input. Correct answer: {correct}\n")
-        save_stats()
-        return False
 
+    # --- Multiple choice mode ---
+    else:
+        wrong_options = random.sample(
+            [w["english"] if direction == "to_english" else w["swedish"]
+             for w in words if w != word],
+            3
+        )
+        options = wrong_options + [correct_answer]
+        random.shuffle(options)
+        print(prompt)
+        for i, opt in enumerate(options, 1):
+            print(f"  {i}. {opt}")
+
+        answer = input("Your answer (1-4): ").strip()
+        try:
+            if options[int(answer) - 1].lower() == correct_answer.lower():
+                print("✅ Correct!\n")
+                s["correct"] += 1
+                save_stats()
+                return True
+            else:
+                print(f"❌ Correct answer: {correct_answer}\n")
+                save_stats()
+                return False
+        except (ValueError, IndexError):
+            print(f"⚠️ Invalid input. Correct answer: {correct_answer}\n")
+            save_stats()
+            return False
+
+
+# --- Main loop ---
 print("=== 🇸🇪 Swedish Function Words Quiz ===")
-print("Type the number of your answer. Ctrl+C to quit.\n")
+print("Multiple choice → Typing when mastered.")
+print("Ctrl+C to quit.\n")
 
 score = 0
 total = 0
@@ -180,8 +206,6 @@ try:
         total += 1
         if ask_question(word):
             score += 1
-        # print(f"Score: {score}/{total} ({round(score/total*100,1)}%)\n")
-
 except KeyboardInterrupt:
     print("\n👋 Goodbye!")
     save_stats()
