@@ -1,0 +1,17 @@
+| Swedish       | English                 | Example sentence                                                        |
+| ------------- | ----------------------- | ----------------------------------------------------------------------- |
+| **börja**     | to begin / start        | *Jag har börjat läsa boken.* → “I have started reading the book.”       |
+| **fortsätta** | to continue             | *Hon fortsätter studera svenska.* → “She continues studying Swedish.”   |
+| **sluta**     | to stop / quit          | *Han slutade röka.* → “He stopped smoking.”                             |
+| **försöka**   | to try                  | *De försöker förstå texten.* → “They try to understand the text.”       |
+| **planera**   | to plan                 | *Vi planerar att resa till Sverige.* → “We plan to travel to Sweden.”   |
+| **lära sig**  | to learn                | *Hon lär sig spela piano.* → “She is learning to play the piano.”       |
+| **välja**     | to choose               | *De valde att stanna hemma.* → “They chose to stay home.”               |
+| **hoppas**    | to hope                 | *Jag hoppas att du mår bra.* → “I hope that you are well.”              |
+| **tänka**     | to intend / think       | *Jag tänker resa imorgon.* → “I intend to travel tomorrow.”             |
+| **orka**      | to have energy / manage | *Han orkade inte fortsätta.* → “He didn’t have the energy to continue.” |
+| **behöva**    | to need                 | *Du behöver inte gå nu.* → “You don’t need to go now.”                  |
+| **måste**     | must / have to          | *Du måste läsa texten.* → “You must read the text.”                     |
+| **kunna**     | can / be able to        | *Hon kan simma snabbt.* → “She can swim fast.”                          |
+| **få**        | to be allowed / get to  | *Du får gå hem tidigt.* → “You are allowed to go home early.”           |
+| **låta**      | to let / allow          | *Hon lät barnen leka.* → “She let the children play.”                   |

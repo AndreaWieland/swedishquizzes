@@ -78,6 +78,15 @@ words = [
     {"swedish": "nog", "english": "probably / enough"},
     {"swedish": "precis", "english": "exactly"},
     {"swedish": "liksom", "english": "like / sort of"},
+    {"swedish": "nyss", "english": "just (recently)"},
+    {"swedish": "nära", "english": "near"},
+    {"swedish": "vanligt", "english": "usual"},
+    {"swedish": "ovanligt", "english": "unusual"},
+    {"swedish": "plötsligt", "english": "suddenly"},
+    {"swedish": "lyckligtvis", "english": "luckily"},
+    {"swedish": "särskilt", "english": "particularly/ especially"},
+    {"swedish": "i närheten", "english": "nearby"},
+    {"swedish": "illa", "english": "badly"},
 ]
 
 # Load or initialize stats
@@ -120,11 +129,11 @@ def ask_question(word):
     )
 
     if direction == "to_english":
-        question = f"What is the English meaning of '{word['swedish']}'?"
+        question = f"'{word['swedish']}'?"
         correct = word["english"]
         options = wrong_options + [correct]
     else:
-        question = f"What is the Swedish word for '{word['english']}'?"
+        question = f"'{word['english']}'?"
         correct = word["swedish"]
         options = wrong_options + [correct]
 
@@ -139,12 +148,12 @@ def ask_question(word):
 
     try:
         if options[int(answer) - 1].lower() == correct.lower():
-            print("✅ Correct!\n")
+            print("✅ \n")
             s["correct"] += 1
             save_stats()
             return True
         else:
-            print(f"❌ Incorrect. Correct answer: {correct}\n")
+            print(f"❌ {correct}\n")
             save_stats()
             return False
     except (ValueError, IndexError):
@@ -164,16 +173,8 @@ try:
         total += 1
         if ask_question(word):
             score += 1
-        print(f"Score: {score}/{total} ({round(score/total*100,1)}%)\n")
+        # print(f"Score: {score}/{total} ({round(score/total*100,1)}%)\n")
 
 except KeyboardInterrupt:
     print("\n👋 Goodbye!")
-    print(f"Final score: {score}/{total} ({round(score/total*100,1)}%)")
-
-    # Summary of weak words
-    print("\n📊 Words that need more review:")
-    sorted_stats = sorted(stats.items(), key=lambda kv: (kv[1]["correct"]/kv[1]["asked"]) if kv[1]["asked"] else 0)
-    for sw, s in sorted_stats[:10]:
-        acc = s["correct"]/s["asked"] if s["asked"] else 0
-        print(f"  {sw}: {s['correct']}/{s['asked']} ({round(acc*100,1)}%)")
     save_stats()

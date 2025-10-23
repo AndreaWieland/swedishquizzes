@@ -1,0 +1,22 @@
+| Swedish (infinitive)            | English                   | Example sentence                                                                          |
+| ------------------------------- | ------------------------- | ----------------------------------------------------------------------------------------- |
+| **bry sig**                     | to care / mind            | *Han bryr sig inte om reglerna.* → “He doesn’t care about the rules.”                     |
+| **oroa sig**                    | to worry                  | *Hon oroar sig för provet.* → “She worries about the exam.”                               |
+| **skämma sig**                  | to be ashamed             | *Jag skäms över mitt misstag.* → “I’m ashamed of my mistake.”                             |
+| **försvara sig**                | to defend oneself         | *Han försvarade sig mot kritiken.* → “He defended himself against the criticism.”         |
+| **anpassa sig**                 | to adapt / adjust         | *Vi måste anpassa oss till situationen.* → “We must adapt to the situation.”              |
+| **fara illa**                   | to be harmed / get hurt   | *Hunden kunde ha farit illa.* → “The dog could have been hurt.”                           |
+| **hålla sig**                   | to keep / stay            | *Håll dig här!* → “Stay here!”                                                            |
+| **förlova sig**                 | to get engaged            | *De har förlovat sig.* → “They have gotten engaged.”                                      |
+| **gifta sig**                   | to get married            | *De gifte sig förra året.* → “They got married last year.”                                |
+| **sköta sig**                   | to behave                 | *Barnen skötte sig under resan.* → “The children behaved during the trip.”                |
+| **lägga sig**                   | to lie down / go to bed   | *Jag lägger mig tidigt.* → “I go to bed early.”                                           |
+| **sätta sig**                   | to sit down               | *Sätt dig här!* → “Sit down here!”                                                        |
+| **klä på sig**                  | to get dressed            | *Han klär på sig snabbt.* → “He gets dressed quickly.”                                    |
+| **klä av sig**                  | to undress                | *Hon klädde av sig innan duschen.* → “She undressed before the shower.”                   |
+| **akta sig**                    | to be careful             | *Akta dig för hunden!* → “Watch out for the dog!”                                         |
+| **se sig om**                   | to look around            | *Han såg sig om i rummet.* → “He looked around the room.”                                 |
+| **ta sig**                      | to manage / get somewhere | *Han tog sig hem trots stormen.* → “He managed to get home despite the storm.”            |
+| **bete sig**                    | to behave                 | *Barnen betedde sig bra.* → “The children behaved well.”                                  |
+| **minnas** / **komma ihåg sig** | to remember               | *Jag minns inte vad som hände.* → “I don’t remember what happened.”                       |
+| **sätta sig in i**              | to familiarize oneself    | *Hon satte sig in i ämnet snabbt.* → “She familiarized herself with the subject quickly.” |
