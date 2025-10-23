@@ -87,13 +87,13 @@ words = [
     {"swedish": "särskilt", "english": "particularly/ especially"},
     {"swedish": "i närheten", "english": "nearby"},
     {"swedish": "illa", "english": "badly"},
-    senaste: recent/latest
-    istället: instead
-    vilket: which
-    både: both
-    fler: more
-    viktiga: important
-    Samtidigt: simultaneously/at the same time
+    {"swedish": "senaste", "english": "recent/latest"},
+    {"swedish": "istället", "english": "instead"},
+    {"swedish": "vilket", "english": "which"},
+    {"swedish": "både", "english": "both"},
+    {"swedish": "fler", "english": "more"},
+    {"swedish": "viktiga", "english": "important"},
+    {"swedish": "samtidigt", "english": "simultaneously/at the same time"},
 ]
 
 # Load or initialize stats
