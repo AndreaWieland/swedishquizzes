@@ -20,3 +20,4 @@
 | **bete sig**                    | to behave                 | *Barnen betedde sig bra.* → “The children behaved well.”                                  |
 | **minnas** / **komma ihåg sig** | to remember               | *Jag minns inte vad som hände.* → “I don’t remember what happened.”                       |
 | **sätta sig in i**              | to familiarize oneself    | *Hon satte sig in i ämnet snabbt.* → “She familiarized herself with the subject quickly.” |
+lära sig: learn
