@@ -61,6 +61,7 @@ verbs = [
     # {"english": "think", "infinitive": "tänka", "present": "tänker", "past": "tänkte", "supine": "tänkt", "imperative": "tänk"},
     # {"english": "believe", "infinitive": "tro", "present": "tror", "past": "trodde", "supine": "trott", "imperative": "tro"},
     # {"english": "feel", "infinitive": "må", "present": "mår", "past": "mådde", "supine": "mått", "imperative": "må"}
+    {"english": "invite", "infinitive": "bjuda", "present": "bjuder", "past": "bjöd", "supine": "bjudit", "imperative": "bjud"},
 ]
 
 if os.path.exists(SAVE_FILE):

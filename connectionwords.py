@@ -48,7 +48,7 @@ words = [
     {"swedish": "ibland", "english": "sometimes"},
     {"swedish": "snart", "english": "soon"},
     {"swedish": "kanske", "english": "maybe / perhaps"},
-    {"swedish": "nästan", "english": "almost"},
+    {"swedish": "nästan", "english": "almost/next"},
     {"swedish": "fortfarande", "english": "still"},
     {"swedish": "här", "english": "here"},
     {"swedish": "där", "english": "there"},
@@ -94,6 +94,8 @@ words = [
     {"swedish": "fler", "english": "more"},
     {"swedish": "viktiga", "english": "important"},
     {"swedish": "samtidigt", "english": "simultaneously/at the same time"},
+    {"swedish": "fler", "english": "next to"},
+    {"swedish": "flera", "english": "several"},
 ]
 
 # Load or initialize stats
