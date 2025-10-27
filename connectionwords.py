@@ -1,7 +1,6 @@
 import json
 import random
 import os
-from collections import defaultdict
 
 STATS_FILE = "function_word_stats.json"
 
@@ -75,7 +74,6 @@ words = [
     {"swedish": "typ", "english": "like / kind of"},
     {"swedish": "ju", "english": "(as you know / indeed)"},
     {"swedish": "väl", "english": "surely / well"},
-    {"swedish": "nog", "english": "probably / enough"},
     {"swedish": "precis", "english": "exactly"},
     {"swedish": "liksom", "english": "like / sort of"},
     {"swedish": "nyss", "english": "just (recently)"},
@@ -96,9 +94,32 @@ words = [
     {"swedish": "samtidigt", "english": "simultaneously/at the same time"},
     {"swedish": "fler", "english": "next to"},
     {"swedish": "flera", "english": "several"},
+    {"swedish": "nedan", "english": "below"}, #as in below on the page
+    {"swedish": "endast", "english": "only"},
+    {"swedish": "tidigare", "english": "previously" },
+    {"swedish": "sådant", "english": "such"},
+    {"swedish": "hela", "english": "whole/all"},
+    {"swedish": "tidigt", "english": "early"},
+    {"swedish": "någonstans", "english": "anywhere"},
+    {"swedish": "för", "english": "too [adjective]"},
+    {"swedish": "vanligtvis", "english": "usually"},
+    {"swedish": "tillräckligt med", "english": "enough"},
+    {"swedish": "förmodligen", "english": "probably"},
+    # medan: while
+    # varje: every/each
+    # annan: other
+    # imorse: this morning
+    # del: part/portion
+    # helt: completely
+    # inom: within
+    # fram: up/forward
+    # enligt: according to
+    # särskilt: particularly
+    utom: except
+
+
 ]
 
-# Load or initialize stats
 if os.path.exists(STATS_FILE):
     with open(STATS_FILE, "r", encoding="utf-8") as f:
         stats = json.load(f)
@@ -110,9 +131,6 @@ for w in words:
     sw = w["swedish"]
     if sw not in stats:
         stats[sw] = {"asked": 0, "correct": 0}
-
-LEVEL_UP_THRESHOLD = 0.8  # accuracy needed to switch to typing mode
-MIN_ASKS_FOR_LEVELUP = 5  # need at least this many attempts before switching
 
 def save_stats():
     with open(STATS_FILE, "w", encoding="utf-8") as f:
@@ -133,27 +151,18 @@ def weighted_choice(words):
     return random.choices(words, weights=weights, k=1)[0]
 
 def ask_question(word):
-    """Ask either multiple-choice or short-answer based on performance."""
+    """Ask question: English → Swedish = typing, Swedish → English = multiple choice."""
     s = stats[word["swedish"]]
-    asked, correct = s["asked"], s["correct"]
-    accuracy = correct / asked if asked > 0 else 0
-
-    # Decide if we should use typing mode for this word
-    typing_mode = asked >= MIN_ASKS_FOR_LEVELUP and accuracy >= LEVEL_UP_THRESHOLD
-
-    direction = random.choice(["to_english", "to_swedish"])
     s["asked"] += 1
 
-    if direction == "to_english":
-        prompt = f"'{word['swedish']}' → "
-        correct_answer = word["english"]
-    else:
+    # Randomly choose direction
+    direction = random.choice(["to_english", "to_swedish"])
+
+    if direction == "to_swedish":
+        # English → Swedish: always typing
         prompt = f"'{word['english']}' → "
         correct_answer = word["swedish"]
-
-    # --- Short answer mode ---
-    if typing_mode:
-        answer = input(f"{prompt}").strip().lower()
+        answer = input(prompt).strip().lower()
         if answer == correct_answer.lower():
             print("✅ Correct!\n")
             s["correct"] += 1
@@ -164,11 +173,12 @@ def ask_question(word):
             save_stats()
             return False
 
-    # --- Multiple choice mode ---
     else:
+        # Swedish → English: always multiple choice
+        prompt = f"'{word['swedish']}' → "
+        correct_answer = word["english"]
         wrong_options = random.sample(
-            [w["english"] if direction == "to_english" else w["swedish"]
-             for w in words if w != word],
+            [w["english"] for w in words if w != word],
             3
         )
         options = wrong_options + [correct_answer]
@@ -193,10 +203,10 @@ def ask_question(word):
             save_stats()
             return False
 
-
 # --- Main loop ---
 print("=== 🇸🇪 Swedish Function Words Quiz ===")
-print("Multiple choice → Typing when mastered.")
+print("Swedish → English: Multiple choice")
+print("English → Swedish: Typing\n")
 print("Ctrl+C to quit.\n")
 
 score = 0
