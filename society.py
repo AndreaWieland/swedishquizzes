@@ -124,8 +124,8 @@ all_nouns = [
     {"type": "noun", "swedish": "satsning", "english": "investment"},
     {"type": "noun", "swedish": "mål", "english": "goal"},
     {"type": "noun", "swedish": "färdighet", "english": "skill"},
-    förnybar:  renewable
-    på grund av: because of
+    {"type": "noun", "swedish": "förnybar", "english": "renewable"},
+    {"type": "noun", "swedish": "på grund av", "english": "because of"},
 ]
 
 all_verbs = [
@@ -586,9 +586,9 @@ def get_weight(entry, tense=None):
 # ===============================
 
 START_SIZE = 5        # how many of each to start with
-UNLOCK_BATCH = 3      # how many new words to add when unlocking
-MASTERY_THRESHOLD = 0.6  # proportion correct required
-MIN_ATTEMPTS = 3      # need at least this many attempts to count
+UNLOCK_BATCH = 5      # how many new words to add when unlocking
+MASTERY_THRESHOLD = 0.5  # proportion correct required
+MIN_ATTEMPTS = 2      # need at least this many attempts to count
 
 active_nouns = all_nouns[:START_SIZE]
 active_verbs = all_verbs[:START_SIZE]
@@ -632,10 +632,6 @@ def update_active_words():
         next_v = min(len(all_verbs), len(active_verbs) + UNLOCK_BATCH)
         active_verbs = all_verbs[:next_v]
         print(f"🌱 Added {next_v - len(active_verbs)} new verbs! Total active: {len(active_verbs)}")
-
-# ===============================
-#  QUIZ FUNCTIONS
-# ===============================
 
 def ask_noun(noun):
     key = f"noun-{noun['swedish']}"
