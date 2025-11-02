@@ -1,0 +1,82 @@
+{
+  "noun-konst-indefinite": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-tradition-indefinite": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-kultur-indefinite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-högtid-plural": {
+    "asked": 2,
+    "correct": 1
+  },
+  "misc-kulturell": {
+    "asked": 2,
+    "correct": 1
+  },
+  "noun-målning-plural": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-sjunga-infinitive": {
+    "asked": 2,
+    "correct": 0
+  },
+  "misc-klassisk": {
+    "asked": 3,
+    "correct": 2
+  },
+  "noun-högtid-definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-rita-supine": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-skriva-infinitive": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-rita-past": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-modern": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-konstnärlig": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-sjunga-supine": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-måla-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-skriva-past": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-populär": {
+    "asked": 2,
+    "correct": 0
+  },
+  "noun-konst-plural_definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-högtid-plural_definite": {
+    "asked": 1,
+    "correct": 0
+  }
+}

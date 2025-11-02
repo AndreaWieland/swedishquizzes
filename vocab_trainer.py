@@ -34,7 +34,7 @@ if choice not in TOPICS:
     exit(0)
 
 topic_name = TOPICS[choice]
-STATS_FILE = f"{topic_name}_stats.json"
+STATS_FILE = f"stats/{topic_name}_stats.json"
 
 try:
     topic_module = importlib.import_module(f"topics.{topic_name}")
@@ -92,7 +92,7 @@ def get_weight(category, key):
 
 START_SIZE = 5
 UNLOCK_BATCH = 7
-MASTERY_THRESHOLD = 0.5
+MASTERY_THRESHOLD = 0.8
 MIN_ATTEMPTS = 2
 
 active_nouns = all_nouns[:START_SIZE]
@@ -150,7 +150,7 @@ def update_active_words():
 
     # Misc
     if active_misc:
-        mastered_misc = sum(is_mastered(n) for n in active_misc)
+        mastered_misc = sum(is_mastered(n, "misc") for n in active_misc)
         if mastered_misc / len(active_misc) >= 0.7 and len(active_misc) < len(all_misc):
             next_m = min(len(all_misc), len(active_misc) + UNLOCK_BATCH)
             print(f"🌱 Added {next_m - len(active_misc)} new misc words! Total active: {next_m}")
@@ -242,7 +242,11 @@ def ask_misc(entry):
     ensure_stats("misc", key)
     stats[key]["asked"] += 1
 
-    direction = random.choice(["to_english", "to_swedish"])
+    direction = random.choices(
+        ["to_english", "to_swedish"],
+        weights=[0.2, 0.8],
+        k=1
+    )[0]
 
     if direction == "to_english":
         correct = entry["english"]

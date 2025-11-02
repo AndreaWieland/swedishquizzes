@@ -1,0 +1,330 @@
+{
+  "verb-påverka-past": {
+    "asked": 4,
+    "correct": 3
+  },
+  "noun-medborgare": {
+    "asked": 15,
+    "correct": 14
+  },
+  "noun-samhället": {
+    "asked": 8,
+    "correct": 7
+  },
+  "verb-förändra-present": {
+    "asked": 4,
+    "correct": 3
+  },
+  "verb-styra-present": {
+    "asked": 5,
+    "correct": 4
+  },
+  "verb-styra-past": {
+    "asked": 5,
+    "correct": 4
+  },
+  "noun-regering": {
+    "asked": 14,
+    "correct": 12
+  },
+  "verb-leda-supine": {
+    "asked": 5,
+    "correct": 3
+  },
+  "verb-leda-present": {
+    "asked": 6,
+    "correct": 5
+  },
+  "verb-leda-infinitive": {
+    "asked": 7,
+    "correct": 6
+  },
+  "verb-påverka-imperative": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-bestämma-supine": {
+    "asked": 4,
+    "correct": 3
+  },
+  "noun-rättighet": {
+    "asked": 17,
+    "correct": 15
+  },
+  "verb-påverka-present": {
+    "asked": 5,
+    "correct": 4
+  },
+  "noun-skyldighet": {
+    "asked": 25,
+    "correct": 21
+  },
+  "verb-förändra-imperative": {
+    "asked": 5,
+    "correct": 5
+  },
+  "verb-förändra-infinitive": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-styra-imperative": {
+    "asked": 3,
+    "correct": 2
+  },
+  "verb-bestämma-past": {
+    "asked": 9,
+    "correct": 8
+  },
+  "verb-förändra-past": {
+    "asked": 4,
+    "correct": 3
+  },
+  "verb-påverka-supine": {
+    "asked": 7,
+    "correct": 7
+  },
+  "verb-leda-imperative": {
+    "asked": 6,
+    "correct": 5
+  },
+  "verb-bestämma-present": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-bestämma-imperative": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-förändra-supine": {
+    "asked": 7,
+    "correct": 5
+  },
+  "verb-styra-supine": {
+    "asked": 4,
+    "correct": 4
+  },
+  "noun-regel": {
+    "asked": 11,
+    "correct": 11
+  },
+  "noun-lag": {
+    "asked": 5,
+    "correct": 5
+  },
+  "noun-riksdag": {
+    "asked": 11,
+    "correct": 10
+  },
+  "verb-leda-past": {
+    "asked": 3,
+    "correct": 1
+  },
+  "verb-bestämma-infinitive": {
+    "asked": 2,
+    "correct": 2
+  },
+  "noun-minister": {
+    "asked": 8,
+    "correct": 7
+  },
+  "verb-styra-infinitive": {
+    "asked": 5,
+    "correct": 3
+  },
+  "verb-påverka-infinitive": {
+    "asked": 2,
+    "correct": 2
+  },
+  "noun-parti": {
+    "asked": 8,
+    "correct": 7
+  },
+  "noun-politiker": {
+    "asked": 4,
+    "correct": 3
+  },
+  "verb-bygga-supine": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-bygga-present": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-utveckla-supine": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-bygga-imperative": {
+    "asked": 4,
+    "correct": 3
+  },
+  "verb-utveckla-past": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-skapa-infinitive": {
+    "asked": 4,
+    "correct": 4
+  },
+  "verb-bygga-infinitive": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-utveckla-imperative": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-utveckla-infinitive": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-demokrati": {
+    "asked": 2,
+    "correct": 1
+  },
+  "noun-omröstning": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-diktatur": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-val": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-skapa-supine": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-på grund av": {
+    "asked": 10,
+    "correct": 10
+  },
+  "misc-förnybar": {
+    "asked": 9,
+    "correct": 8
+  },
+  "noun-samhälle": {
+    "asked": 2,
+    "correct": 0
+  },
+  "verb-minska-past": {
+    "asked": 3,
+    "correct": 2
+  },
+  "noun-samhälle-plural_definite": {
+    "asked": 3,
+    "correct": 3
+  },
+  "noun-samhälle-plural": {
+    "asked": 4,
+    "correct": 3
+  },
+  "noun-samhälle-indefinite": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-medborgare-plural_definite": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-medborgare-definite": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-förbättra-infinitive": {
+    "asked": 2,
+    "correct": 0
+  },
+  "noun-regering-plural": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-regering-definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-minska-supine": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-val-plural_definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-val-definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-frihet-plural": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-arbeta-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-arbeta-infinitive": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-lag-plural": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-rättvisa-indefinite": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-politiker-plural_definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-frihet-indefinite": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-förbättra-imperative": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-jämlikhet-definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-diskutera-supine": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-myndighet-definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "noun-rättvisa-plural": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-demokrati-plural": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-arbeta-past": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-rösta-imperative": {
+    "asked": 1,
+    "correct": 0
+  },
+  "noun-samhälle-definite": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-öka-past": {
+    "asked": 1,
+    "correct": 0
+  }
+}

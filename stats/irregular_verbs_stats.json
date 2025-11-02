@@ -1,0 +1,178 @@
+{
+  "verb-komma-imperative": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-komma-supine": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-komma-past": {
+    "asked": 3,
+    "correct": 2
+  },
+  "verb-gå-past": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-gå-imperative": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-gå-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-vara-past": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-göra-past": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-göra-supine": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-vara-infinitive": {
+    "asked": 4,
+    "correct": 2
+  },
+  "verb-bli-past": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-gå-supine": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-bli-imperative": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-vara-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-bli-infinitive": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-göra-infinitive": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-bli-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-bli-supine": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-få-present": {
+    "asked": 2,
+    "correct": 2
+  },
+  "verb-stå-imperative": {
+    "asked": 3,
+    "correct": 2
+  },
+  "verb-se-imperative": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-sitta-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-se-past": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-ta-past": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-lyckas-present": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-ge-supine": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-stå-past": {
+    "asked": 3,
+    "correct": 2
+  },
+  "verb-gå-infinitive": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-lyckas-supine": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-komma-infinitive": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-lyckas-past": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-få-supine": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-ge-infinitive": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-ta-imperative": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-se-infinitive": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-sitta-imperative": {
+    "asked": 2,
+    "correct": 1
+  },
+  "verb-stå-supine": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-ge-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-sitta-supine": {
+    "asked": 1,
+    "correct": 0
+  },
+  "verb-stå-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-ta-present": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-stå-infinitive": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-vara-supine": {
+    "asked": 1,
+    "correct": 1
+  },
+  "verb-vara-imperative": {
+    "asked": 1,
+    "correct": 0
+  }
+}

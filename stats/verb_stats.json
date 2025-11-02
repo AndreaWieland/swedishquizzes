@@ -1,0 +1,126 @@
+{
+  "gå-infinitive": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "bli-present": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "få-present": {
+    "correct": 1,
+    "wrong": 1
+  },
+  "se-present": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "vara-imperative": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "ge-imperative": {
+    "correct": 0,
+    "wrong": 1
+  },
+  "se-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "göra-infinitive": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "ge-infinitive": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "få-supine": {
+    "correct": 2,
+    "wrong": 0
+  },
+  "se-past": {
+    "correct": 2,
+    "wrong": 0
+  },
+  "vara-infinitive": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "vara-present": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "komma-past": {
+    "correct": 0,
+    "wrong": 1
+  },
+  "bli-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "komma-present": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "göra-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "komma-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "gå-present": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "vara-past": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "gå-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "komma-infinitive": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "få-past": {
+    "correct": 0,
+    "wrong": 1
+  },
+  "gå-past": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "ge-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "göra-imperative": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "få-infinitive": {
+    "correct": 1,
+    "wrong": 1
+  },
+  "komma-imperative": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "göra-present": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "vara-supine": {
+    "correct": 1,
+    "wrong": 0
+  },
+  "bli-infinitive": {
+    "correct": 1,
+    "wrong": 0
+  }
+}

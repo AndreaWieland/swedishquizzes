@@ -1,0 +1,378 @@
+{
+  "misc-men": {
+    "asked": 30,
+    "correct": 27
+  },
+  "misc-för att": {
+    "asked": 19,
+    "correct": 16
+  },
+  "misc-eller": {
+    "asked": 20,
+    "correct": 19
+  },
+  "misc-och": {
+    "asked": 14,
+    "correct": 13
+  },
+  "misc-eftersom": {
+    "asked": 23,
+    "correct": 21
+  },
+  "misc-mycket": {
+    "asked": 16,
+    "correct": 14
+  },
+  "misc-dock": {
+    "asked": 26,
+    "correct": 22
+  },
+  "misc-bara": {
+    "asked": 11,
+    "correct": 11
+  },
+  "misc-därför": {
+    "asked": 7,
+    "correct": 5
+  },
+  "misc-så att": {
+    "asked": 12,
+    "correct": 10
+  },
+  "misc-också": {
+    "asked": 8,
+    "correct": 8
+  },
+  "misc-så": {
+    "asked": 10,
+    "correct": 9
+  },
+  "misc-under": {
+    "asked": 11,
+    "correct": 11
+  },
+  "misc-mellan": {
+    "asked": 14,
+    "correct": 12
+  },
+  "misc-utan": {
+    "asked": 7,
+    "correct": 7
+  },
+  "misc-över": {
+    "asked": 11,
+    "correct": 11
+  },
+  "misc-hos": {
+    "asked": 8,
+    "correct": 7
+  },
+  "misc-bakom": {
+    "asked": 8,
+    "correct": 8
+  },
+  "misc-framför": {
+    "asked": 15,
+    "correct": 13
+  },
+  "misc-efter": {
+    "asked": 14,
+    "correct": 14
+  },
+  "misc-i": {
+    "asked": 10,
+    "correct": 9
+  },
+  "misc-genom": {
+    "asked": 12,
+    "correct": 11
+  },
+  "misc-på": {
+    "asked": 7,
+    "correct": 7
+  },
+  "misc-till": {
+    "asked": 11,
+    "correct": 11
+  },
+  "misc-av": {
+    "asked": 10,
+    "correct": 9
+  },
+  "misc-innan": {
+    "asked": 16,
+    "correct": 13
+  },
+  "misc-om": {
+    "asked": 7,
+    "correct": 7
+  },
+  "misc-mot": {
+    "asked": 15,
+    "correct": 14
+  },
+  "misc-från": {
+    "asked": 7,
+    "correct": 6
+  },
+  "misc-för": {
+    "asked": 7,
+    "correct": 7
+  },
+  "misc-bland": {
+    "asked": 19,
+    "correct": 16
+  },
+  "misc-när": {
+    "asked": 5,
+    "correct": 5
+  },
+  "misc-ibland": {
+    "asked": 16,
+    "correct": 13
+  },
+  "misc-trots": {
+    "asked": 8,
+    "correct": 7
+  },
+  "misc-ofta": {
+    "asked": 3,
+    "correct": 3
+  },
+  "misc-aldrig": {
+    "asked": 9,
+    "correct": 7
+  },
+  "misc-redan": {
+    "asked": 18,
+    "correct": 14
+  },
+  "misc-ännu": {
+    "asked": 6,
+    "correct": 4
+  },
+  "misc-snart": {
+    "asked": 17,
+    "correct": 14
+  },
+  "misc-alltid": {
+    "asked": 8,
+    "correct": 8
+  },
+  "misc-hit": {
+    "asked": 9,
+    "correct": 8
+  },
+  "misc-kanske": {
+    "asked": 9,
+    "correct": 9
+  },
+  "misc-där": {
+    "asked": 5,
+    "correct": 5
+  },
+  "misc-dit": {
+    "asked": 7,
+    "correct": 7
+  },
+  "misc-fortfarande": {
+    "asked": 6,
+    "correct": 5
+  },
+  "misc-nästan": {
+    "asked": 5,
+    "correct": 4
+  },
+  "misc-här": {
+    "asked": 4,
+    "correct": 4
+  },
+  "misc-finns": {
+    "asked": 8,
+    "correct": 7
+  },
+  "misc-hemma": {
+    "asked": 2,
+    "correct": 2
+  },
+  "misc-borta": {
+    "asked": 8,
+    "correct": 7
+  },
+  "misc-ute": {
+    "asked": 6,
+    "correct": 6
+  },
+  "misc-hem": {
+    "asked": 5,
+    "correct": 4
+  },
+  "misc-inne": {
+    "asked": 3,
+    "correct": 3
+  },
+  "misc-än": {
+    "asked": 11,
+    "correct": 6
+  },
+  "misc-tillsammans": {
+    "asked": 6,
+    "correct": 5
+  },
+  "misc-igen": {
+    "asked": 5,
+    "correct": 5
+  },
+  "misc-fastän": {
+    "asked": 12,
+    "correct": 6
+  },
+  "misc-även om": {
+    "asked": 6,
+    "correct": 5
+  },
+  "misc-ensam": {
+    "asked": 3,
+    "correct": 3
+  },
+  "misc-dessutom": {
+    "asked": 7,
+    "correct": 5
+  },
+  "misc-däremot": {
+    "asked": 7,
+    "correct": 5
+  },
+  "misc-ju": {
+    "asked": 8,
+    "correct": 3
+  },
+  "misc-nämligen": {
+    "asked": 3,
+    "correct": 2
+  },
+  "misc-typ": {
+    "asked": 4,
+    "correct": 3
+  },
+  "misc-således": {
+    "asked": 12,
+    "correct": 8
+  },
+  "misc-väl": {
+    "asked": 9,
+    "correct": 5
+  },
+  "misc-alltså": {
+    "asked": 8,
+    "correct": 5
+  },
+  "misc-till exempel": {
+    "asked": 2,
+    "correct": 2
+  },
+  "misc-runt": {
+    "asked": 8,
+    "correct": 7
+  },
+  "misc-nyss": {
+    "asked": 3,
+    "correct": 3
+  },
+  "misc-ovanligt": {
+    "asked": 4,
+    "correct": 2
+  },
+  "misc-nära": {
+    "asked": 2,
+    "correct": 2
+  },
+  "misc-liksom": {
+    "asked": 5,
+    "correct": 4
+  },
+  "misc-plötsligt": {
+    "asked": 4,
+    "correct": 3
+  },
+  "misc-vanligt": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-vilket": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-lyckligtvis": {
+    "asked": 5,
+    "correct": 5
+  },
+  "misc-senaste": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-särskilt": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-istället": {
+    "asked": 3,
+    "correct": 2
+  },
+  "misc-precis": {
+    "asked": 2,
+    "correct": 2
+  },
+  "misc-fler": {
+    "asked": 5,
+    "correct": 4
+  },
+  "misc-nedan": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-både": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-endast": {
+    "asked": 4,
+    "correct": 2
+  },
+  "misc-tidigare": {
+    "asked": 3,
+    "correct": 2
+  },
+  "misc-i närheten": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-illa": {
+    "asked": 2,
+    "correct": 2
+  },
+  "misc-samtidigt": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-flera": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-viktig": {
+    "asked": 1,
+    "correct": 1
+  },
+  "misc-tillräckligt med": {
+    "asked": 2,
+    "correct": 1
+  },
+  "misc-sådant": {
+    "asked": 3,
+    "correct": 1
+  },
+  "misc-tidigt": {
+    "asked": 1,
+    "correct": 0
+  }
+}
