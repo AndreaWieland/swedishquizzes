@@ -44,6 +44,11 @@ verbs = [
     {"infinitive": "hitta", "present": "hittar", "past": "hittade", "supine": "hittat", "english": "to find", "cefr": 1, "frequency": 390.73},
     {"infinitive": "tappa bort", "present": "tappar bort", "past": "tappade bort", "supine": "tappat bort", "english": "to lose", "cefr": 1, "frequency": None},
     {"infinitive": "komma fram", "present": "kommer fram", "past": "kom fram", "supine": "kommit fram", "english": "to arrive", "cefr": 1, "frequency": None},
+    {"infinitive": "vända", "present": "vänder", "past": "vände", "supine": "vänt", "english": "to turn", "cefr": 1, "frequency": 749.26},
+    {"infinitive": "dra", "present": "drar", "past": "drog", "supine": "dragit", "english": "to pull/draw", "cefr": 1, "frequency": 389.89},
+    {"infinitive": "hamna", "present": "hamnar", "past": "hamnade", "supine": "hamnat", "english": "to end up", "cefr": 1, "frequency": 139.40},
+    {"infinitive": "fara", "present": "far", "past": "for", "supine": "farit", "english": "to go/travel", "cefr": 1, "frequency": 114.82},
+    {"infinitive": "befinna", "present": "befinner", "past": "befann", "supine": "befunnit", "english": "to find oneself", "cefr": 1, "frequency": 102.66},
 ]
 
 misc = [
@@ -55,4 +60,20 @@ misc = [
     {"swedish": "nästa", "english": "next", "cefr": 1, "frequency": 237.94},
     {"swedish": "förra", "english": "last (previous)", "cefr": 1, "frequency": 170.92},
     {"swedish": "äntligen", "english": "finally", "cefr": 1, "frequency": 69.88},
+    {"swedish": "ut", "english": "out", "cefr": 1, "frequency": 1481.50},
+    {"swedish": "upp", "english": "up", "cefr": 1, "frequency": 1322.38},
+    {"swedish": "in", "english": "in, into", "cefr": 1, "frequency": 1274.61},
+    {"swedish": "ner", "english": "down", "cefr": 1, "frequency": 339.66},
+    {"swedish": "bort", "english": "away", "cefr": 1, "frequency": 313.64},
+    {"swedish": "vidare", "english": "further, onwards", "cefr": 1, "frequency": 297.70},
+    {"swedish": "tillbaka", "english": "back", "cefr": 1, "frequency": 259.58},
+    {"swedish": "ned", "english": "down", "cefr": 1, "frequency": 120.50},
+    {"swedish": "iväg", "english": "away, off", "cefr": 1, "frequency": 72.74},
+    {"swedish": "vänster", "english": "left", "cefr": 1, "frequency": 69.77},
+    {"swedish": "framåt", "english": "forward", "cefr": 1, "frequency": 66.04},
+    {"swedish": "förbi", "english": "past, by", "cefr": 2, "frequency": 61.34},
+    {"swedish": "undan", "english": "away, aside", "cefr": 2, "frequency": 57.50},
+    {"swedish": "höger", "english": "right", "cefr": 2, "frequency": 51.47},
+    {"swedish": "uppe", "english": "up (position)", "cefr": 2, "frequency": 50.95},
+    {"swedish": "nere", "english": "down, downstairs", "cefr": 2, "frequency": 40.57},
 ]

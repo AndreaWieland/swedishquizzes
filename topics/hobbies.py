@@ -38,6 +38,12 @@ verbs = [
     {"infinitive": "träffas", "present": "träffas", "past": "träffades", "supine": "träffats", "english": "to meet (each other)", "cefr": 1, "frequency": None},
     {"infinitive": "njuta", "present": "njuter", "past": "njöt", "supine": "njutit", "english": "to enjoy", "cefr": 2, "frequency": 44.46},
     {"infinitive": "vinna", "present": "vinner", "past": "vann", "supine": "vunnit", "english": "to win", "cefr": 1, "frequency": 226.63},
+    {"infinitive": "ro", "present": "ror", "past": "rodde", "supine": "rott", "english": "to row", "cefr": 1, "frequency": 816.02},
+    {"infinitive": "öva", "present": "övar", "past": "övade", "supine": "övat", "english": "to practice", "cefr": 1, "frequency": 496.12},
+    {"infinitive": "kommentera", "present": "kommenterar", "past": "kommenterade", "supine": "kommenterat", "english": "to comment", "cefr": 1, "frequency": 142.95},
+    {"infinitive": "gilla", "present": "gillar", "past": "gillade", "supine": "gillat", "english": "to like", "cefr": 1, "frequency": 142.42},
+    {"infinitive": "samla", "present": "samlar", "past": "samlade", "supine": "samlat", "english": "to collect/gather", "cefr": 1, "frequency": 118.53},
+    {"infinitive": "kolla", "present": "kollar", "past": "kollade", "supine": "kollat", "english": "to check", "cefr": 1, "frequency": 116.13},
 ]
 
 misc = [
@@ -48,4 +54,5 @@ misc = [
     {"swedish": "hellre", "english": "rather", "cefr": 1, "frequency": None},
     {"swedish": "gärna", "english": "gladly", "cefr": 1, "frequency": 387.27},
     {"swedish": "lite", "english": "a little", "cefr": 1, "frequency": 1288.09},
+    {"swedish": "kul", "english": "fun", "cefr": 1, "frequency": 121.60},
 ]

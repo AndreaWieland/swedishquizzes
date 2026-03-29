@@ -42,6 +42,10 @@ nouns = [
     {"indefinite": "kundvagn", "definite": "kundvagnen", "plural": "kundvagnar", "plural_definite": "kundvagnarna", "english": "shopping cart", "cefr": 1, "frequency": None},
     {"indefinite": "storlek", "definite": "storleken", "plural": "storlekar", "plural_definite": "storlekarna", "english": "size", "cefr": 2, "frequency": 49.07},
     {"indefinite": "kundtjänst", "definite": "kundtjänsten", "plural": "kundtjänster", "plural_definite": "kundtjänsterna", "english": "customer support", "cefr": 1, "frequency": None},
+    {"indefinite": "ring", "definite": "ringen", "plural": "ringar", "plural_definite": "ringarna", "english": "ring", "cefr": 1, "frequency": 658.84},
+    {"indefinite": "peng", "definite": "pengen", "plural": "pengar", "plural_definite": "pengarna", "english": "money", "cefr": 1, "frequency": 365.10},
+    {"indefinite": "krona", "definite": "kronan", "plural": "kronor", "plural_definite": "kronorna", "english": "crown, Swedish krona", "cefr": 1, "frequency": 207.79},
+    {"indefinite": "etikett", "definite": "etiketten", "plural": "etiketter", "plural_definite": "etiketterna", "english": "label, etiquette", "cefr": 1, "frequency": 202.31},
 ]
 
 verbs = [

@@ -49,6 +49,8 @@ nouns = [
     {"indefinite": "lösning", "definite": "lösningen", "plural": "lösningar", "plural_definite": "lösningarna", "english": "solution", "cefr": 1, "frequency": 144.58},
     {"indefinite": "problem", "definite": "problemet", "plural": "problem", "plural_definite": "problemen", "english": "problem", "cefr": 1, "frequency": 520.62},
     {"indefinite": "hot", "definite": "hotet", "plural": "hot", "plural_definite": "hoten", "english": "threat", "cefr": 1, "frequency": 104.27},
+    {"indefinite": "orm", "definite": "ormen", "plural": "ormar", "plural_definite": "ormarna", "english": "snake", "cefr": 1, "frequency": 228.11},
+    {"indefinite": "is", "definite": "isen", "plural": "isar", "plural_definite": "isarna", "english": "ice", "cefr": 1, "frequency": 186.84},
 ]
 
 verbs = [
@@ -71,6 +73,9 @@ verbs = [
     {"infinitive": "påminna", "present": "påminner", "past": "påminde", "supine": "påmint", "english": "to remind", "cefr": 2, "frequency": 56.57},
     {"infinitive": "ansvara", "present": "ansvarar", "past": "ansvarade", "supine": "ansvarat", "english": "to be responsible", "cefr": 2, "frequency": 26.59},
     {"infinitive": "förbättra", "present": "förbättrar", "past": "förbättrade", "supine": "förbättrat", "english": "to improve", "cefr": 1, "frequency": 95.10},
+    {"infinitive": "beta", "present": "betar", "past": "betade", "supine": "betat", "english": "to graze", "cefr": 1, "frequency": 286.58},
+    {"infinitive": "växa", "present": "växer", "past": "växte", "supine": "växt", "english": "to grow", "cefr": 1, "frequency": 162.65},
+    {"infinitive": "falla", "present": "faller", "past": "föll", "supine": "fallit", "english": "to fall", "cefr": 1, "frequency": 152.58},
 ]
 
 misc = [
@@ -90,4 +95,7 @@ misc = [
     {"swedish": "billig", "english": "cheap", "cefr": 1, "frequency": 73.02},
     {"swedish": "dyr", "english": "expensive", "cefr": 1, "frequency": 63.35},
     {"swedish": "ansvarsfullt", "english": "responsibly", "cefr": 1, "frequency": None},
+    {"swedish": "djup", "english": "deep", "cefr": 1, "frequency": 64.61},
+    {"swedish": "södra", "english": "southern", "cefr": 2, "frequency": 53.02},
+    {"swedish": "norra", "english": "northern", "cefr": 2, "frequency": 52.24},
 ]

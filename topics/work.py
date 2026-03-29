@@ -37,6 +37,11 @@ nouns = [
     {"indefinite": "konferens", "definite": "konferensen", "plural": "konferenser", "plural_definite": "konferenserna", "english": "conference", "cefr": 2, "frequency": 43.68},
     {"indefinite": "presentation", "definite": "presentationen", "plural": "presentationer", "plural_definite": "presentationerna", "english": "presentation", "cefr": 3, "frequency": 19.28},
     {"indefinite": "deadline", "definite": "deadlinen", "plural": "deadlines", "plural_definite": "deadlinesen", "english": "deadline", "cefr": 1, "frequency": None},
+    {"indefinite": "jobb", "definite": "jobbet", "plural": "jobb", "plural_definite": "jobben", "english": "job", "cefr": 1, "frequency": 266.97},
+    {"indefinite": "verksamhet", "definite": "verksamheten", "plural": "verksamheter", "plural_definite": "verksamheterna", "english": "activity, business", "cefr": 1, "frequency": 249.20},
+    {"indefinite": "krav", "definite": "kravet", "plural": "krav", "plural_definite": "kraven", "english": "demand, requirement", "cefr": 1, "frequency": 223.66},
+    {"indefinite": "roll", "definite": "rollen", "plural": "roller", "plural_definite": "rollerna", "english": "role", "cefr": 1, "frequency": 213.39},
+    {"indefinite": "ledning", "definite": "ledningen", "plural": "ledningar", "plural_definite": "ledningarna", "english": "management, leadership", "cefr": 1, "frequency": 197.93},
 ]
 
 misc = [
@@ -64,6 +69,7 @@ misc = [
     {"word": "både ... och", "english": "both ... and", "cefr": 1, "frequency": None},
     {"word": "antingen ... eller", "english": "either ... or", "cefr": 1, "frequency": None},
     {"word": "varken ... eller", "english": "neither ... nor", "cefr": 1, "frequency": None},
+    {"swedish": "arbetslös", "english": "unemployed", "cefr": 2, "frequency": 44.20},
 ]
 
 verbs = [
@@ -82,4 +88,27 @@ verbs = [
     {"infinitive": "misslyckas", "english": "to fail", "present": "misslyckas", "past": "misslyckades", "supine": "misslyckats", "cefr": 2, "frequency": 42.04},
     {"infinitive": "leverera", "english": "to deliver", "present": "levererar", "past": "levererade", "supine": "levererat", "cefr": 2, "frequency": 45.14},
     {"infinitive": "ta emot", "english": "to receive", "present": "tar emot", "past": "tog emot", "supine": "tagit emot", "cefr": 1, "frequency": None},
+    {"infinitive": "kapa", "present": "kapar", "past": "kapade", "supine": "kapat", "english": "to cut/sever", "cefr": 1, "frequency": 435.80},
+    {"infinitive": "kräva", "present": "kräver", "past": "krävde", "supine": "krävt", "english": "to require/demand", "cefr": 1, "frequency": 347.50},
+    {"infinitive": "ämna", "present": "ämnar", "past": "ämnade", "supine": "ämnat", "english": "to intend", "cefr": 1, "frequency": 307.66},
+    {"infinitive": "åta sig", "present": "åtar sig", "past": "åtog sig", "supine": "åtagit sig", "english": "to undertake", "cefr": 1, "frequency": 275.39},
+    {"infinitive": "rätta", "present": "rättar", "past": "rättade", "supine": "rättat", "english": "to correct", "cefr": 1, "frequency": 265.36},
+    {"infinitive": "jobba", "present": "jobbar", "past": "jobbade", "supine": "jobbat", "english": "to work", "cefr": 1, "frequency": 221.99},
+    {"infinitive": "klara", "present": "klarar", "past": "klarade", "supine": "klarat", "english": "to manage/handle", "cefr": 1, "frequency": 218.16},
+    {"infinitive": "driva", "present": "driver", "past": "drev", "supine": "drivit", "english": "to drive/run", "cefr": 1, "frequency": 183.30},
+    {"infinitive": "länka", "present": "länkar", "past": "länkade", "supine": "länkat", "english": "to link", "cefr": 1, "frequency": 179.35},
+    {"infinitive": "genomföra", "present": "genomför", "past": "genomförde", "supine": "genomfört", "english": "to carry out", "cefr": 1, "frequency": 174.86},
+    {"infinitive": "räkna", "present": "räknar", "past": "räknade", "supine": "räknat", "english": "to count/calculate", "cefr": 1, "frequency": 172.91},
+    {"infinitive": "beskriva", "present": "beskriver", "past": "beskrev", "supine": "beskrivit", "english": "to describe", "cefr": 1, "frequency": 172.36},
+    {"infinitive": "utgöra", "present": "utgör", "past": "utgjorde", "supine": "utgjort", "english": "to constitute", "cefr": 1, "frequency": 167.61},
+    {"infinitive": "fatta", "present": "fattar", "past": "fattade", "supine": "fattat", "english": "to grasp/decide", "cefr": 1, "frequency": 160.43},
+    {"infinitive": "starta", "present": "startar", "past": "startade", "supine": "startat", "english": "to start", "cefr": 1, "frequency": 151.68},
+    {"infinitive": "innehålla", "present": "innehåller", "past": "innehöll", "supine": "innehållit", "english": "to contain", "cefr": 1, "frequency": 141.45},
+    {"infinitive": "erbjuda", "present": "erbjuder", "past": "erbjöd", "supine": "erbjudit", "english": "to offer", "cefr": 1, "frequency": 127.44},
+    {"infinitive": "ingå", "present": "ingår", "past": "ingick", "supine": "ingått", "english": "to be included", "cefr": 1, "frequency": 126.92},
+    {"infinitive": "bestå", "present": "består", "past": "bestod", "supine": "bestått", "english": "to consist", "cefr": 1, "frequency": 126.46},
+    {"infinitive": "presentera", "present": "presenterar", "past": "presenterade", "supine": "presenterat", "english": "to present", "cefr": 1, "frequency": 119.78},
+    {"infinitive": "lösa", "present": "löser", "past": "löste", "supine": "löst", "english": "to solve", "cefr": 1, "frequency": 116.34},
+    {"infinitive": "utföra", "present": "utför", "past": "utförde", "supine": "utfört", "english": "to carry out/perform", "cefr": 1, "frequency": 113.17},
+    {"infinitive": "omfatta", "present": "omfattar", "past": "omfattade", "supine": "omfattat", "english": "to comprise/encompass", "cefr": 1, "frequency": 103.14},
 ]

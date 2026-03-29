@@ -43,6 +43,7 @@ nouns = [
     {"indefinite": "torktumlare", "definite": "torktumlaren", "plural": "torktumlare", "plural_definite": "torktummarna", "english": "dryer", "cefr": 1, "frequency": None},
     {"indefinite": "elräkning", "definite": "elräkningen", "plural": "elräkningar", "plural_definite": "elräkningarna", "english": "electricity bill", "cefr": 1, "frequency": None},
     {"indefinite": "värme", "definite": "värmen", "plural": "värmar", "plural_definite": "värmarna", "english": "heat", "cefr": 2, "frequency": 34.25},
+    {"indefinite": "hus", "definite": "huset", "plural": "hus", "plural_definite": "husen", "english": "house", "cefr": 1, "frequency": 206.57},
 ]
 
 verbs = [
@@ -71,6 +72,10 @@ verbs = [
     {"infinitive": "reparera", "present": "reparerar", "past": "reparerade", "supine": "reparerat", "english": "to repair", "cefr": 1, "frequency": None},
     {"infinitive": "låsa", "present": "låser", "past": "låsde", "supine": "låst", "english": "to lock", "cefr": 2, "frequency": 30.76},
     {"infinitive": "byta", "present": "byter", "past": "bytte", "supine": "bytt", "english": "to change, replace", "cefr": 1, "frequency": 119.29},
+    {"infinitive": "riva", "present": "river", "past": "rev", "supine": "rivit", "english": "to tear/demolish", "cefr": 1, "frequency": 1088.02},
+    {"infinitive": "sätta", "present": "sätter", "past": "satte", "supine": "satt", "english": "to put/set", "cefr": 1, "frequency": 375.30},
+    {"infinitive": "ställa", "present": "ställer", "past": "ställde", "supine": "ställt", "english": "to place/put", "cefr": 1, "frequency": 361.06},
+    {"infinitive": "fylla", "present": "fyller", "past": "fyllde", "supine": "fyllt", "english": "to fill", "cefr": 1, "frequency": 116.00},
 ]
 
 misc = [

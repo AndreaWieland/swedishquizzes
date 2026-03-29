@@ -44,6 +44,9 @@ nouns = [
     {"indefinite": "present", "definite": "presenten", "plural": "presenter", "plural_definite": "presenterna", "english": "gift", "cefr": 3, "frequency": 15.71},
     {"indefinite": "nationaldag", "definite": "nationaldagen", "plural": "nationaldagar", "plural_definite": "nationaldagarna", "english": "national day", "cefr": 1, "frequency": None},
     {"indefinite": "midsommar", "definite": "midsommaren", "plural": "midsomrar", "plural_definite": "midsomrarna", "english": "Midsummer", "cefr": 1, "frequency": None},
+    {"indefinite": "bild", "definite": "bilden", "plural": "bilder", "plural_definite": "bilderna", "english": "picture, image", "cefr": 1, "frequency": 468.80},
+    {"indefinite": "kyrka", "definite": "kyrkan", "plural": "kyrkor", "plural_definite": "kyrkorna", "english": "church", "cefr": 1, "frequency": 268.45},
+    {"indefinite": "text", "definite": "texten", "plural": "texter", "plural_definite": "texterna", "english": "text", "cefr": 1, "frequency": 234.60},
 ]
 
 verbs = [
@@ -87,4 +90,12 @@ misc = [
     {"swedish": "engagerad", "english": "engaged, involved", "cefr": 1, "frequency": None},
     {"swedish": "aktivt", "english": "actively", "cefr": 2, "frequency": 35.10},
     {"swedish": "nästan alltid", "english": "almost always", "cefr": 1, "frequency": None},
+    {"swedish": "kristen", "english": "Christian", "cefr": 1, "frequency": 164.51},
+    {"swedish": "religiös", "english": "religious", "cefr": 1, "frequency": 91.15},
+    {"swedish": "helig", "english": "holy, sacred", "cefr": 1, "frequency": 90.59},
+    {"swedish": "historisk", "english": "historical", "cefr": 1, "frequency": 90.34},
+    {"swedish": "judisk", "english": "Jewish", "cefr": 1, "frequency": 73.26},
+    {"swedish": "muslimsk", "english": "Muslim", "cefr": 1, "frequency": 68.24},
+    {"swedish": "andlig", "english": "spiritual", "cefr": 2, "frequency": 47.60},
+    {"swedish": "katolsk", "english": "Catholic", "cefr": 2, "frequency": 40.79},
 ]

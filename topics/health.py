@@ -47,6 +47,11 @@ nouns = [
     {"indefinite": "själ", "definite": "själen", "plural": "själar", "plural_definite": "själarna", "english": "soul", "cefr": 2, "frequency": 53.26},
     {"indefinite": "livsstil", "definite": "livsstilen", "plural": "livsstilar", "plural_definite": "livsstilarna", "english": "lifestyle", "cefr": 3, "frequency": 16.85},
     {"indefinite": "vanor", "definite": "vanan", "plural": "vanor", "plural_definite": "vanorna", "english": "habit", "cefr": 1, "frequency": None},
+    {"indefinite": "hand", "definite": "handen", "plural": "händer", "plural_definite": "händerna", "english": "hand", "cefr": 1, "frequency": 288.60},
+    {"indefinite": "ägg", "definite": "ägget", "plural": "ägg", "plural_definite": "äggen", "english": "egg", "cefr": 1, "frequency": 403.03},
+    {"indefinite": "te", "definite": "teet", "plural": "teer", "plural_definite": "teerna", "english": "tea", "cefr": 1, "frequency": 401.97},
+    {"indefinite": "mun", "definite": "munnen", "plural": "munnar", "plural_definite": "munnarna", "english": "mouth", "cefr": 1, "frequency": 213.93},
+    {"indefinite": "gram", "definite": "grammet", "plural": "gram", "plural_definite": "grammen", "english": "gram", "cefr": 1, "frequency": 171.53},
 ]
 
 verbs = [
@@ -95,6 +100,9 @@ verbs = [
     {"infinitive": "rekommendera", "present": "rekommenderar", "past": "rekommenderade", "supine": "rekommenderat", "english": "to recommend", "cefr": 2, "frequency": 57.61},
     {"infinitive": "kontrollera", "present": "kontrollerar", "past": "kontrollerade", "supine": "kontrollerat", "english": "to check, to control", "cefr": 1, "frequency": 74.97},
     {"infinitive": "acceptera", "present": "accepterar", "past": "accepterade", "supine": "accepterat", "english": "to accept", "cefr": 1, "frequency": 111.33},
+    {"infinitive": "bära", "present": "bär", "past": "bar", "supine": "burit", "english": "to carry/bear", "cefr": 1, "frequency": 422.35},
+    {"infinitive": "luta", "present": "lutar", "past": "lutade", "supine": "lutat", "english": "to lean", "cefr": 1, "frequency": 150.20},
+    {"infinitive": "drabba", "present": "drabbar", "past": "drabbade", "supine": "drabbat", "english": "to hit/affect", "cefr": 1, "frequency": 115.55},
 ]
 
 misc = [
@@ -143,4 +151,11 @@ misc = [
     {"swedish": "fysiskt", "english": "physically", "cefr": 1, "frequency": None},
     {"swedish": "hälsosamt", "english": "healthily", "cefr": 1, "frequency": None},
     {"swedish": "försiktigt", "english": "carefully", "cefr": 3, "frequency": 12.25},
+    {"swedish": "död", "english": "dead", "cefr": 1, "frequency": 85.90},
+    {"swedish": "sexuell", "english": "sexual", "cefr": 1, "frequency": 67.49},
+    {"swedish": "fysisk", "english": "physical", "cefr": 1, "frequency": 64.96},
+    {"swedish": "rädd", "english": "afraid, scared", "cefr": 2, "frequency": 58.45},
+    {"swedish": "kär", "english": "dear, in love", "cefr": 2, "frequency": 52.50},
+    {"swedish": "lycklig", "english": "happy", "cefr": 2, "frequency": 45.77},
+    {"swedish": "äcklig", "english": "disgusting", "cefr": 2, "frequency": 39.49},
 ]
