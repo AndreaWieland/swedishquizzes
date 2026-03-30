@@ -2,5 +2,9 @@
   "verb-anställa-past": {
     "asked": 1,
     "correct": 0
+  },
+  "verb-utbilda-present": {
+    "asked": 1,
+    "correct": 1
   }
 }
